@@ -78,6 +78,7 @@ func resolveSymbolPath(module string, symname string, addr uint64, pid int) (str
 // getUserSymbolsAndAddresses finds a list of symbols associated with a module,
 // along with their addresses. The results are cached in the symbolCache and
 // returned
+/*
 func getUserSymbolsAndAddresses(module string) ([]*symbolAddress, error) {
 	symbolCache.lock.Lock()
 	defer symbolCache.lock.Unlock()
@@ -97,7 +98,7 @@ func getUserSymbolsAndAddresses(module string) ([]*symbolAddress, error) {
 	}
 	return symbolCache.cache[module], nil
 }
-
+*/
 func matchUserSymbols(module, match string) ([]*symbolAddress, error) {
 	r, err := regexp.Compile(match)
 	if err != nil {
